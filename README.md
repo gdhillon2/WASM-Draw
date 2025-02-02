@@ -19,7 +19,7 @@ Before running WASM-Draw, you need to install the following tools:
 make
 ```
 
-4. Host a local server to serve the files:
+4. Host a local server to serve the files (I personally use a python http server):
 ```
 python3 -m http.server
 ```
