@@ -78,6 +78,11 @@ extern "C" {
     }
 
     EMSCRIPTEN_KEEPALIVE
+    int get_line_mode() {
+        return gameState.lineMode;
+    }
+
+    EMSCRIPTEN_KEEPALIVE
     int set_circle_mode() {
         gameState.lineMode = 0;
         gameState.circleMode = !gameState.circleMode;
@@ -86,10 +91,20 @@ extern "C" {
     }
 
     EMSCRIPTEN_KEEPALIVE
+    int get_circle_mode() {
+        return gameState.circleMode;
+    }
+
+    EMSCRIPTEN_KEEPALIVE
     int set_square_mode() {
         gameState.lineMode = 0;
         gameState.circleMode = 0;
         gameState.squareMode = !gameState.squareMode;
+        return gameState.squareMode;
+    }
+
+    EMSCRIPTEN_KEEPALIVE
+    int get_square_mode() {
         return gameState.squareMode;
     }
 }
